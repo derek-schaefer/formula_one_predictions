@@ -44,9 +44,21 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Makes http fun! Also, makes consuming restful web services dead easy.
+gem 'httparty', '~> 0.21.0'
+
+# Rubyzip is a ruby module for reading and writing zip files
+gem 'rubyzip', '~> 2.3', '>= 2.3.2'
+
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '~> 4.9', '>= 4.9.3'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+
+  # Use Pry as your rails console
+  gem 'pry-rails', '~> 0.3.9'
 end
 
 group :development do
@@ -58,6 +70,12 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Rspec-rails is a testing framework for Rails 5+.
+  gem 'rspec-rails', '~> 6.1', '>= 6.1.1'
+
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality.
+  gem 'shoulda-matchers', '~> 6.1'
 end
 
 group :test do
